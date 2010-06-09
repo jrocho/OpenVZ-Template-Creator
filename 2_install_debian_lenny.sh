@@ -18,13 +18,6 @@ sed -i -e 's@\([[:space:]]\)\(/var/log/\)@\1-\2@' /etc/*syslog.conf
 rm -f /etc/mtab
 ln -s /proc/mounts /etc/mtab
 
-cat << EOF > /etc/resolv.conf
-nameserver 213.133.98.98
-nameserver 213.133.99.99
-nameserver 213.133.100.100
-
-EOF
-
 cat << EOF > /etc/apt/sources.list
 deb http://ftp.de.debian.org/debian/ lenny main contrib non-free
 deb-src http://ftp.de.debian.org/debian/ lenny main contrib non-free
